@@ -1,4 +1,4 @@
-const { arrayReduce } = require('./solution');
+const { reduce } = require('./solution');
 
 const examples = [
   { nums: [1,2,3,4], fn: (a,c) => a + c, init: 0, expected: 10 },
@@ -7,6 +7,6 @@ const examples = [
 ];
 
 examples.forEach((e, i) => {
-  const res = arrayReduce(e.nums, e.fn, e.init);
+  const res = reduce(e.nums, e.fn, e.init);
   console.log(`Case ${i+1}:`, res, res === e.expected ? 'OK' : `FAIL (expected ${e.expected})`);
 });

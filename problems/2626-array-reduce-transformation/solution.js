@@ -1,16 +1,13 @@
 /**
  * LeetCode 2626 — Array Reduce Transformation
- * @param {number[]} nums
- * @param {(accum:number, curr:number)=>number} fn
- * @param {number} init
- * @return {number}
+ * User-provided implementation exported as `reduce`.
  */
-function arrayReduce(nums, fn, init) {
-  let val = init;
-  for (let i = 0; i < nums.length; i++) {
-    val = fn(val, nums[i]);
-  }
-  return val;
-}
+var reduce = function(nums, fn, init) {
+    let curr = init;
+    for (let i = 0; i < nums.length; i++) {
+        curr = fn(curr, nums[i]);
+    }
+    return curr;
+};
 
-module.exports = { arrayReduce };
+module.exports = { reduce };
