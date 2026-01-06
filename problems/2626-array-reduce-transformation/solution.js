@@ -1,13 +1,15 @@
 /**
- * LeetCode 2626 — Array Reduce Transformation
- * User-provided implementation exported as `reduce`.
+ * @param {number[]} nums
+ * @param {Function} fn
+ * @param {number} init
+ * @return {number}
  */
 var reduce = function(nums, fn, init) {
-    let curr = init;
-    for (let i = 0; i < nums.length; i++) {
-        curr = fn(curr, nums[i]);
+    let res=init;
+    for(let i=0;i<nums.length;i++){
+        res=fn(res,nums[i])
     }
-    return curr;
+    return res
 };
 
 module.exports = { reduce };
