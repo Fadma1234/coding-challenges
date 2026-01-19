@@ -1,24 +1,22 @@
-/**
- * @param {number[]} nums
- * @return {number[]}
- */
 var productExceptSelf = function(nums) {
     const n = nums.length;
-    const output = new Array(n).fill(1);
-    
-    let prefix = 1;
+    const result = new Array(n).fill(1);
+
+    // Left products
+    let left = 1;
     for (let i = 0; i < n; i++) {
-        output[i] = prefix;
-        prefix *= nums[i];
+        result[i] = left;
+        left *= nums[i];
     }
-    
-    let suffix = 1;
+
+    // Right products
+    let right = 1;
     for (let i = n - 1; i >= 0; i--) {
-        output[i] *= suffix;
-        suffix *= nums[i];
+        result[i] *= right;
+        right *= nums[i];
     }
-    
-    return output;
+
+    return result;
 };
 
 module.exports = { productExceptSelf };
