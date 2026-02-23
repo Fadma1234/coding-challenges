@@ -1,5 +1,7 @@
 # 238. Products of Array Except Self
 
+Status: Solved
+
 Medium
 
 Company Tags
