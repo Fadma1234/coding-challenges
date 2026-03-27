@@ -1,0 +1,24 @@
+{
+  "name": "coding-challenges",
+  "version": "1.0.0",
+  "description": "This repository is for practicing coding and improving my skills.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fadma1234/coding-challenges.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Fadma1234/coding-challenges/issues"
+  },
+  "homepage": "https://github.com/Fadma1234/coding-challenges#readme",
+  "devDependencies": {
+    "jest": "^30.3.0"
+  }
+}
