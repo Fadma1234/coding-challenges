@@ -11,6 +11,7 @@ This repository is for practicing coding and improving my skills.
 - HTML
 - CSS
 - JavaScript
+- Python
 
 ## Status
 This project is for learning and practice only.
