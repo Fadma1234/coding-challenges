@@ -21,6 +21,6 @@ describe('Street Fighter 2 Character Selection', () => {
   test('stays within vertical bounds', () => {
     const moves = ['up', 'up', 'down', 'down', 'down'];
     const result = streetFighterSelection(fighters, [0, 2], moves);
-    expect(result).toEqual(['Blanka', 'Blanka', 'Zangief', 'Dhalsim', 'Dhalsim']);
+    expect(result).toEqual(['Blanka', 'Blanka', 'Zangief', 'Zangief', 'Zangief']);
   });
 });
