@@ -1,23 +1,24 @@
-function streetFighterSelection(fighters, position, moves){
-  var result = [];
-  
-  moves.forEach(function(move) {
-    if (move === "up") {
-      position[0] = 0;
+function streetFighterSelection(fighters, position, moves) {
+  const result = [];
+  const height = fighters.length;
+  const width = fighters[0].length;
+  let row = position[0];
+  let col = position[1];
+
+  for (const move of moves) {
+    if (move === 'up') {
+      if (row > 0) row -= 1;
+    } else if (move === 'down') {
+      if (row < height - 1) row += 1;
+    } else if (move === 'left') {
+      col = (col - 1 + width) % width;
+    } else if (move === 'right') {
+      col = (col + 1) % width;
     }
-    else if (move === "down") {
-      position[0] = 1;
-    }
-    else if (move === "right") {
-      position[1] = (position[1] === 5) ? 0 : position[1] + 1;
-    }
-    else if (move === "left") {
-      position[1] = (position[1] === 0) ? 5 : position[1] - 1;
-    }
-    
-    result.push(fighters[position[0]][position[1]]);
-  });
-  
+
+    result.push(fighters[row][col]);
+  }
+
   return result;
 }
 
